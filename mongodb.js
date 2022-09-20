@@ -7,14 +7,16 @@ MongoClient.connect(connectionURL,{ useNewUrlParser:true, useUnifiedTopology: tr
     if(error){
         return console.log("error connecting to the database")
     }
+    // console.log("Connected")
     const db = client.db(databaseName)
     
+  
     // const id = ObjectID()
     // console.log(id)
     // console.log(id.id)
     // db.collection("users").insertOne({
-    //     name:"Milind",
-    //     age:26
+    //     name:"Riya",
+    //     age:22
     // },(error,result)=>{
     //     if(error){
     //         return console.log("Could not add document")
@@ -40,10 +42,10 @@ MongoClient.connect(connectionURL,{ useNewUrlParser:true, useUnifiedTopology: tr
     //     completed:false
     // },{
     //     description:"Complete 1/4 of tutorial",
-    //     completed:true
+    //     completed:false
     // },{
     //     description:"Cry",
-    //     completed:true
+    //     completed:false
     // }],(error,result)=>{
     //     if(error){
     //         return console.log("There is an error")
@@ -111,20 +113,20 @@ MongoClient.connect(connectionURL,{ useNewUrlParser:true, useUnifiedTopology: tr
     //     console.log(error)
     // })
 
-    db.collection("users").deleteMany({
-        "name":"Milind"
-    }).then((result)=>{
-        console.log(result)
-    }).catch((error)=>{
-        console.log(error)
-    })
-    db.collection("tasks").deleteOne({
-        "description":"Complete 1/4 of tutorial"
-    }).then((result)=>{
-        console.log(result)
-    }).catch((error)=>{
-        console.log(error)
-    })
+    // db.collection("users").deleteMany({
+    //     "name":"Milind"
+    // }).then((result)=>{
+    //     console.log(result)
+    // }).catch((error)=>{
+    //     console.log(error)
+    // })
+    // db.collection("tasks").deleteOne({
+    //     "description":"Complete 1/4 of tutorial"
+    // }).then((result)=>{
+    //     console.log(result)
+    // }).catch((error)=>{
+    //     console.log(error)
+    // })
 
 
 
